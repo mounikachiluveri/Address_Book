@@ -40,6 +40,31 @@ public class AddressBook {
                         System.out.println(p);
                     });
                     break;
+                case 6:
+                case 6:
+                    personList = personList.stream().sorted((p1 , p2) -> p1.getState().compareTo(p2.getState())).collect(Collectors.toList());
+                    personList.stream().forEach(p->{
+                        System.out.println(p);
+                    });
+                    break;
+                case 7:
+                    personList = personList.stream().sorted((p1 , p2) -> p1.getZip().compareTo(p2.getZip())).collect(Collectors.toList());
+                    personList.stream().forEach(p->{
+                        System.out.println(p);
+                    });
+                    break;
+                case 8:
+                    sc.nextLine();
+                    System.out.println("Enter the City");
+                    String city = sc.nextLine();
+                    System.out.println("Enter the State");
+                    String state = sc.nextLine();
+                    personList.stream().forEach(p->{
+                        if(p.getCity().equals(city) && p.getState().equals(state)){
+                            System.out.println(p);
+                        }
+                    });
+                    break;
                     case 12:
                     isContinue = false;
                     break;
