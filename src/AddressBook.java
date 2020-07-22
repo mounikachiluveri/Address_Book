@@ -40,7 +40,12 @@ public class AddressBook {
                         System.out.println(p);
                     });
                     break;
+<<<<<<< HEAD
                     case 6:
+=======
+                case 6:
+                case 6:
+>>>>>>> UC9_ViewThePersonByStateOrCity
                     personList = personList.stream().sorted((p1 , p2) -> p1.getState().compareTo(p2.getState())).collect(Collectors.toList());
                     personList.stream().forEach(p->{
                         System.out.println(p);
@@ -52,6 +57,21 @@ public class AddressBook {
                         System.out.println(p);
                     });
                     break;
+<<<<<<< HEAD
+=======
+                case 8:
+                    sc.nextLine();
+                    System.out.println("Enter the City");
+                    String city = sc.nextLine();
+                    System.out.println("Enter the State");
+                    String state = sc.nextLine();
+                    personList.stream().forEach(p->{
+                        if(p.getCity().equals(city) && p.getState().equals(state)){
+                            System.out.println(p);
+                        }
+                    });
+                    break;
+>>>>>>> UC9_ViewThePersonByStateOrCity
                     case 12:
                     isContinue = false;
                     break;
