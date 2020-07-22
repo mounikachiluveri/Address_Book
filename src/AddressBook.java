@@ -34,7 +34,13 @@ public class AddressBook {
                         System.out.println(p);
                     });
                     break;
-                case 12:
+                case 5:
+                    personList = personList.stream().sorted((p1 , p2) -> p1.getCity().compareTo(p2.getCity())).collect(Collectors.toList());
+                    personList.stream().forEach(p->{
+                        System.out.println(p);
+                    });
+                    break;
+                    case 12:
                     isContinue = false;
                     break;
 
