@@ -20,9 +20,15 @@ public class AddressBook {
                 break;
                 case 2:
                     PersonUtils.editPersonRecord(personList);
+                cityMap = personList.stream().collect(Collectors.groupingBy(Person::getCity));
+                stateMap = personList.stream().collect(Collectors.groupingBy(Person::getState));
+                break;
+                case 3:
+                    PersonUtils.deletePersonRecord(personList);
                     cityMap = personList.stream().collect(Collectors.groupingBy(Person::getCity));
                     stateMap = personList.stream().collect(Collectors.groupingBy(Person::getState));
-                    break;
+
+
                 case 12:
                     isContinue = false;
                     break;

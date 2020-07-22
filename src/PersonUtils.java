@@ -80,8 +80,25 @@ public static Person extraRecord(Person person) {
                 System.out.println("Person Does not Exist :"+ personEdit.getFname() + " " + personEdit.getLname());
             }
         }
+    public static void deletePersonRecord(List<Person> personList){
+        Person personDelete = PersonUtils.record();
+        if(personList.contains(personDelete)){
+            String flName = personDelete.getFname()+personDelete.getLname();
+            Iterator<Person> personIterator = personList.iterator();
+            while(personIterator.hasNext()){
+                Person person1 = personIterator.next();
+                if(flName.equals(person1.getFname()+person1.getLname())){
+                    personIterator.remove();
+                }
+            }
+        }else{
+            System.out.println("Person Does not Exist :"+ personDelete.getFname() + " " + personDelete.getLname());
+        }
+    }
+    
 
-        private static Boolean stringChecker(String flName) {
+
+    private static Boolean stringChecker(String flName) {
             return true;
         }
 
