@@ -18,6 +18,8 @@ public class AddressBook {
                 cityMap = personList.stream().collect(Collectors.groupingBy(Person::getCity));
                 stateMap = personList.stream().collect(Collectors.groupingBy(Person::getState));
                 break;
+                case 2:
+                    
                 case 12:
                     isContinue = false;
                     break;
