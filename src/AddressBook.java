@@ -14,12 +14,15 @@ public class AddressBook {
             int select = sc.nextInt();
             switch (select) {
                 case 1:
-                PersonUtils.addPerson(personList);
-                cityMap = personList.stream().collect(Collectors.groupingBy(Person::getCity));
-                stateMap = personList.stream().collect(Collectors.groupingBy(Person::getState));
+                   PersonUtils.addPerson(personList);
+                   cityMap = personList.stream().collect(Collectors.groupingBy(Person::getCity));
+                   stateMap = personList.stream().collect(Collectors.groupingBy(Person::getState));
                 break;
                 case 2:
-                    
+                    PersonUtils.editPersonRecord(personList);
+                    cityMap = personList.stream().collect(Collectors.groupingBy(Person::getCity));
+                    stateMap = personList.stream().collect(Collectors.groupingBy(Person::getState));
+                    break;
                 case 12:
                     isContinue = false;
                     break;
