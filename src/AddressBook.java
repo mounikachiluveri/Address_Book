@@ -27,8 +27,13 @@ public class AddressBook {
                     PersonUtils.deletePersonRecord(personList);
                     cityMap = personList.stream().collect(Collectors.groupingBy(Person::getCity));
                     stateMap = personList.stream().collect(Collectors.groupingBy(Person::getState));
-
-
+                    break;
+                case 4:
+                    personList = personList.stream().sorted((p1 , p2) -> p1.getFname().compareTo(p2.getFname())).collect(Collectors.toList());
+                    personList.stream().forEach(p->{
+                        System.out.println(p);
+                    });
+                    break;
                 case 12:
                     isContinue = false;
                     break;
